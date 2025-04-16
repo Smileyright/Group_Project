@@ -7,6 +7,7 @@ function Home() {
     <div>
     <Link href="/About">About</Link>
     <Link href="/Contact">Contact</Link>
+    <FooterComponent />
     </div>
   )
 }
