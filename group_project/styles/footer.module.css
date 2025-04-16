@@ -1,0 +1,53 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+        "icons footnav contact"
+        "footbottom footbottom footbottom"; 
+    gap: 20px;
+    background: #222;
+    color: white;
+    padding: 2rem;
+    border-radius: 50px 0 0 0;
+    font-size: 1.2rem;
+    line-height: 2.3rem;
+}
+
+.icons {
+    grid-area: icons;
+    border-right: 1px solid white;
+}
+
+.footnav {
+    grid-area: footnav;
+    border-right: 1px solid white;
+    padding-right: 0.2rem;
+}
+
+.contact {
+    grid-area: contact;
+}
+
+.footbottom {
+    grid-area: footbottom;
+    text-align: center;
+    border-top: 0.1px solid;
+    padding-top: 20px;
+    width: 100%;
+}
+
+.footnav * {
+    color: white;
+    text-decoration: none;
+    list-style: none;
+}
+
+.icons a {
+    font-size: 2rem;
+    color: white;
+}
+
+.designer {
+    color: rgb(99, 169, 255);
+}
