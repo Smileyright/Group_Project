@@ -3,7 +3,10 @@ import Link from "next/link";
 
 function Home() {
   return (
-    <Link href="/Test">Test</Link>
+    <div>
+    <Link href="/About">About</Link>
+    <Link href="/Contact">Contact</Link>
+    </div>
   )
 }
 
