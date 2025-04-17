@@ -3,6 +3,7 @@ import styles from "@/styles/gallery.module.css";
 import HeaderComponent from "@/components/Header";
 import Navbar from "@/components/Navbar";
 import FooterComponent from "@/components/Footer";
+import '@/styles/global.css';
 
 function GalleryPage() {
   const [artworks, setArtworks] = useState([]);
