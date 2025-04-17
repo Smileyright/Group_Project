@@ -1,12 +1,13 @@
 import React from "react";
-import Link from "next/link";
 import FooterComponent from "@/components/Footer";
 import '../styles/global.css';
+import Head from "next/head";
+import HeaderComponent from "@/components/Header";
 function Home() {
   return (
     <div>
-    <Link href="/About">About</Link>
-    <Link href="/Contact">Contact</Link>
+    <HeaderComponent />
+    <h1>This is the home page</h1>
     <FooterComponent />
     </div>
   )
