@@ -14,10 +14,12 @@ function ContactPage() {
     suggestion: ""
   });
 
+  const [submitted, setSubmitted] = useState(false);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
+    setFormData((prevData) => ({
+      ...prevData,
       [name]: value
     }));
   };
@@ -25,14 +27,20 @@ function ContactPage() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
-    // You can add validation or send to an API here
+    setSubmitted(true);
+    setFormData({
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: "",
+      suggestion: ""
+    });
   };
 
   return (
     <div>
       <HeaderComponent />
       <Navbar />
-
       <div className={styles.contContainer}>
         <div className={styles.contHead}>
           <h4>Artist Gallery</h4>
@@ -49,10 +57,7 @@ function ContactPage() {
 
         <div className={styles.contBody2}>
           <h2>Gallery Suggestions</h2>
-          <p>
-            We are always looking for ways to improve our gallery. If you have
-            any suggestions or feedback, please let us know!
-          </p>
+          <p>We are always looking for ways to improve our gallery. If you have any suggestions or feedback, please let us know!</p>
 
           <form onSubmit={handleSubmit} className={styles.contactForm}>
             <div className={styles.formGroup}>
@@ -61,9 +66,9 @@ function ContactPage() {
                 type="text"
                 id="firstName"
                 name="firstName"
-                placeholder="Your First Name"
                 value={formData.firstName}
                 onChange={handleChange}
+                placeholder="Your First Name"
                 required
               />
             </div>
@@ -74,9 +79,9 @@ function ContactPage() {
                 type="text"
                 id="lastName"
                 name="lastName"
-                placeholder="Your Last Name"
                 value={formData.lastName}
                 onChange={handleChange}
+                placeholder="Your Last Name"
                 required
               />
             </div>
@@ -87,9 +92,9 @@ function ContactPage() {
                 type="email"
                 id="email"
                 name="email"
-                placeholder="Your Email"
                 value={formData.email}
                 onChange={handleChange}
+                placeholder="Your Email"
                 required
               />
             </div>
@@ -100,9 +105,9 @@ function ContactPage() {
                 type="tel"
                 id="phone"
                 name="phone"
-                placeholder="Your Phone Number"
                 value={formData.phone}
                 onChange={handleChange}
+                placeholder="Your Phone Number"
               />
             </div>
 
@@ -111,11 +116,11 @@ function ContactPage() {
               <textarea
                 id="suggestion"
                 name="suggestion"
-                placeholder="Your Suggestion"
-                rows={5}
-                required
                 value={formData.suggestion}
                 onChange={handleChange}
+                placeholder="Your Suggestion"
+                required
+                rows={5}
               />
             </div>
 
@@ -123,6 +128,12 @@ function ContactPage() {
               Submit Suggestion
             </button>
           </form>
+
+          {submitted && (
+            <p style={{ textAlign: "center", marginTop: "1rem", color: "green" }}>
+              Thank you for your suggestion! We'll get back to you soon.
+            </p>
+          )}
         </div>
       </div>
 

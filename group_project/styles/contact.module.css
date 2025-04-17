@@ -26,8 +26,9 @@
   
 .contBody2{
     p{
-        margin: 0px 0px 20px 0px;
+        margin: 0px 0px 60px 0px;
         text-align: center;
+        letter-spacing: 0.1rem;
     }
 
     label{
@@ -120,11 +121,13 @@
 
  .contBody1{
     text-align: center;
+    display: inline-block;
+    margin: 0px 0px 60px 0px;
 
     h3 {
         font-size: 2rem;
         color: #333;
-        margin: 15px 0px 15px 0px;
+        margin: 49px 0px 15px 0px;
     }
 
     h2 {
