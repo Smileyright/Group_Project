@@ -1,7 +1,6 @@
 import React from "react";
 import FooterComponent from "@/components/Footer";
 import '../styles/global.css';
-import Head from "next/head";
 import HeaderComponent from "@/components/Header";
 function Home() {
   return (
