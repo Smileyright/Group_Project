@@ -1,13 +1,14 @@
 import FooterComponent from "@/components/Footer";
 import React from "react";
 
-function ContactPage() {
+function ArtistsPage() {
     return (
         <div>
-            <h1>This is the contact page</h1>
+            <h1>This is the artists page</h1>
             <FooterComponent />
         </div>
+        
     )
 }
 
-export default ContactPage;
+export default ArtistsPage;

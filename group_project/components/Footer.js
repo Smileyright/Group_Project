@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '@/styles/footer.module.css';
+import Link from "next/link";
 
 
 const FooterComponent = () => {
@@ -16,10 +17,10 @@ const FooterComponent = () => {
             <div className={styles.footnav}>
                 <ul>
                     <h3> Art Gallery</h3>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Artists</a></li>
-                    <li><a href="">Gallery</a></li>
-                    <li><a href="">Contact</a></li>
+                    <p><Link href="/">Home</Link></p>
+                    <p><Link href="/Artists">Artists</Link></p>
+                    <p><Link href="/Gallery">Gallery</Link></p>
+                    <p><Link href="/Contact">Contact</Link></p>
                 </ul>
             </div>
 
