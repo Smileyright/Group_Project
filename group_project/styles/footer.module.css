@@ -14,6 +14,10 @@
     line-height: 2.3rem;
 }
 
+.container ul{
+    
+    margin: 0
+}
 .icons {
     grid-area: icons;
     border-right: 1px solid white;
@@ -50,4 +54,55 @@
 
 .designer {
     color: rgb(99, 169, 255);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: 
+            "icons"
+            "footnav"
+            "contact"
+            "footbottom";
+        padding: 1rem;
+        font-size: 1rem;
+        line-height: 1.8rem;
+    }
+
+    .icons {
+        border-right: none;
+        text-align: center;
+    }
+
+    .footnav {
+        border-right: none;
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .contact {
+        text-align: center;
+    }
+
+    .footbottom {
+        padding-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .icons a {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        text-align: center;
+    }
+
+    .container ul{
+        padding: 0px;
+    }
 }
