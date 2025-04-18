@@ -39,15 +39,15 @@ export default function HomePage() {
         <h2>Featured Artists</h2>
         <div className={styles.featuredGrid}>
           <Link href="/Artists/vangogh" className={styles.featuredCard}>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project.jpg" alt="Van Gogh" />
+            <img src="/images/artist2.jpg" alt="Van Gogh" />
             <p>Vincent van Gogh</p>
           </Link>
           <Link href="/Artists/monet" className={styles.featuredCard}>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Claude_Monet_1899_Nadar.jpg" alt="Claude Monet" />
+            <img src="/images/artist1.jpg" alt="Claude Monet" />
             <p>Claude Monet</p>
           </Link>
           <Link href="/Artists/picasso" className={styles.featuredCard}>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Pablo_picasso_1.jpg/800px-Pablo_picasso_1.jpg" alt="Pablo Picasso" />
+            <img src="/images/artist3.jpg" alt="Pablo Picasso" />
             <p>Pablo Picasso</p>
           </Link>
         </div>

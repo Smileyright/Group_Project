@@ -1,0 +1,19 @@
+.slideshow {
+  position: relative;
+  max-width: 1000px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.imageContainer {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.image {
+  border-radius: 12px;
+  width: 100%;
+  height: auto;
+}
+
