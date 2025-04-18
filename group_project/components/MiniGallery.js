@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import styles from "@/styles/minigallery.module.css"; 
+import Link from "next/link";
+import styles from "@/styles/minigallery.module.css";
+
 const images = [
   { src: "/images/art1.PNG", alt: "Art 1" },
   { src: "/images/art2.jpg", alt: "Art 2" },
@@ -19,7 +21,6 @@ const images = [
   { src: "/images/art15.jpg", alt: "Art 15" },
 ];
 
-
 export default function MiniGallery() {
   return (
     <div className={styles.miniGallery}>
@@ -34,7 +35,7 @@ export default function MiniGallery() {
               : "";
 
           return (
-            <div key={index} className={`${styles.imageWrapper} ${dynamicClass}`}>
+            <Link href="/Gallery" key={index} className={`${styles.imageWrapper} ${dynamicClass}`}>
               <Image
                 src={img.src}
                 alt={img.alt}
@@ -43,7 +44,7 @@ export default function MiniGallery() {
                 className={styles.galleryImage}
                 loading="lazy"
               />
-            </div>
+            </Link>
           );
         })}
       </div>
