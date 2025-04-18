@@ -26,7 +26,6 @@ export default function MiniGallery() {
       <h2>Mini Gallery</h2>
       <div className={styles.miniGalleryGrid}>
         {images.map((img, index) => {
-          // Assign some dynamic class names to create variation
           const dynamicClass =
             index % 7 === 0
               ? styles.large
