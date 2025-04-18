@@ -1,22 +1,22 @@
 import React from 'react';
 import styles from '@/styles/footer.module.css';
 import Link from "next/link";
-
+import { FaFacebook, FaTwitter, FaPinterest, FaInstagram, FaTiktok } from 'react-icons/fa';
 
 const FooterComponent = () => {
     return (
         <div className={styles.container}>
             <div className={styles.icons}>
-                <a href=""><i className="fa-brands fa-facebook"></i></a>
-                <a href=""><i className="fa-brands fa-twitter"></i></a>
-                <a href=""><i className="fa-brands fa-pinterest"></i></a>
-                <a href=""><i className="fa-brands fa-instagram"></i></a>
-                <a href=""><i className="fa-brands fa-tiktok"></i></a>
+                <a href="#"><FaFacebook className={styles.icon} /></a>
+                <a href="#"><FaTwitter className={styles.icon} /></a>
+                <a href="#"><FaPinterest className={styles.icon} /></a>
+                <a href="#"><FaInstagram className={styles.icon} /></a>
+                <a href="#"><FaTiktok className={styles.icon} /></a>
             </div>
 
             <div className={styles.footnav}>
                 <ul>
-                    <h3> Art Gallery</h3>
+                    <h3>Art Gallery</h3>
                     <p><Link href="/">Home</Link></p>
                     <p><Link href="/Artists">Artists</Link></p>
                     <p><Link href="/Gallery">Gallery</Link></p>
@@ -32,7 +32,7 @@ const FooterComponent = () => {
             </div>
 
             <div className={styles.footbottom}>
-                <p>Copyright &copy; 2025; Designed by <span className={styles.designer}>Group</span></p>
+                <p>© 2025 — Designed by <span className={styles.designer}>Group</span></p>
             </div>
         </div>
     );

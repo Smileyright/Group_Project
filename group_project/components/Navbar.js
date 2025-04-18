@@ -13,6 +13,10 @@ const Navbar = () => {
                     <li><Link href="/Gallery">Gallery</Link></li>
                     <li><Link href="/Contact">Contact</Link></li>
                 </ul>
+
+            <div className={styles.navLogo}>
+                
+            </div>
             </div>
         </div>
     )
