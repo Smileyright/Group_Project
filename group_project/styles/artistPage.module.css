@@ -75,3 +75,24 @@
 .likeButton:hover {
   background-color: #144225;
 }
+
+.nextArtist {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.nextButton {
+  background-color: #4a6fa5;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.nextButton:hover {
+  background-color: #3b5b89;
+  transform: scale(1.05);
+}

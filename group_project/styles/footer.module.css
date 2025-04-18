@@ -6,13 +6,16 @@
         "icons footnav contact"
         "footbottom footbottom footbottom"; 
     gap: 20px;
-    background: #222;
+    background: linear-gradient(to bottom right, #222, #333);
     color: white;
     padding: 2rem;
     border-radius: 100px 0 0 0;
     font-size: 1.2rem;
     line-height: 2.3rem;
+    text-transform: uppercase;
+    font-weight: lighter;
 }
+
 
 .container ul {
     margin: 0;
@@ -29,19 +32,18 @@
 }
 
 .icons a {
-    font-size: 2rem;
+    font-size: 3rem;
     color: white;
     transition: transform 0.3s ease;
 }
 
 .icons a:hover {
     transform: scale(1.3) rotate(15deg);
-    color: rgb(99, 169, 255);
+    color: rgb(99, 208, 254);
 }
 
 .footnav {
     grid-area: footnav;
-    border-right: 1px solid white;
     padding-right: 0.2rem;
 }
 
@@ -64,7 +66,7 @@
 }
 
 .designer {
-    color: rgb(99, 169, 255);
+    color: rgb(99, 208, 254);
 }
 
 /* Responsive Design */

@@ -163,8 +163,11 @@
   text-align: center;
   background-image: url(../public/images/Ceiling2.png);
   background-size: cover;
-  height: 900px;
+  height: 1300px;
   line-height: 900px;
+
+  -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
 }
 
  .buttSection{

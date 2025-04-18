@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "@/styles/artistPage.module.css";
 import Navbar from "@/components/Navbar";
 import FooterComponent from "@/components/Footer";
@@ -31,18 +32,27 @@ export default function ArtistPage() {
   const { name } = router.query;
 
   const artist = artistDetails[name];
+  const artistKeys = Object.keys(artistDetails);
+  const currentIndex = artistKeys.indexOf(name);
+  const nextArtistKey = artistKeys[(currentIndex + 1) % artistKeys.length];
+  const nextArtistName = artistDetails[nextArtistKey]?.name;
+
   const [likes, setLikes] = useState(0);
   const [liked, setLiked] = useState(false);
 
   const handleLike = () => {
-    if (!liked) {
-      setLikes(likes + 1);
-      setLiked(true);
-    } else {
-      setLikes(likes - 1);
-      setLiked(false);
-    }
+    setLiked((prevLiked) => {
+      const newLiked = !prevLiked;
+      setLikes((prevLikes) => prevLikes + (newLiked ? 1 : -1));
+      return newLiked;
+    });
   };
+
+  useEffect(() => {
+    // Reset likes when switching artists
+    setLikes(0);
+    setLiked(false);
+  }, [name]);
 
   if (!artist) return <p>Artist not found.</p>;
 
@@ -60,7 +70,6 @@ export default function ArtistPage() {
         />
         <p>{artist.bio}</p>
 
-        {/* Interact */}
         <div className={styles.likeSection}>
           <button onClick={handleLike} className={styles.likeButton}>
             {liked ? "❤️ Liked" : "🤍 Like"}
@@ -74,6 +83,15 @@ export default function ArtistPage() {
             <li key={i}>{work}</li>
           ))}
         </ul>
+
+        {/* 👇 NEXT ARTIST BUTTON */}
+        <div className={styles.nextArtist}>
+          <Link href={`/Artists/${nextArtistKey}`}>
+            <button className={styles.nextButton}>
+              Next: {nextArtistName} →
+            </button>
+          </Link>
+        </div>
       </div>
       <FooterComponent />
     </div>
