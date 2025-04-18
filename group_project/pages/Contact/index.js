@@ -53,6 +53,10 @@ function ContactPage() {
           <p>416 675-3111</p>
           <h3>Etobicoke</h3>
           <p>205 Humber College Blvd, Etobicoke, ON M9W 5L7</p>
+
+          <div className={styles.reactLogo}>
+          <img src="/images/react.png" alt="React logo" width="640" height="360"/>
+          </div>
         </div>
 
         <div className={styles.contBody2}>

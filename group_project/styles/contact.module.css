@@ -28,7 +28,7 @@
     p{
         margin: 0px 0px 60px 0px;
         text-align: center;
-        letter-spacing: 0.1rem;
+        letter-spacing: 0.01rem;
     }
 
     label{
@@ -88,11 +88,23 @@
     font-size: 1rem;
   }
   
+  
   .formGroup textarea {
     resize: vertical;
     min-height: 120px;
   }
   
+  .reactLogo{
+    margin-top: 60px;
+    animation: spin 8s linear infinite;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+
   .submitButton {
     background: #4a6fa5;
     color: white;
