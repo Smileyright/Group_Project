@@ -12,7 +12,6 @@ const Navbar = () => {
                     <li><Link href="/Artists/vangogh">Artists</Link></li>
                     <li><Link href="/Gallery">Gallery</Link></li>
                     <li><Link href="/Contact">Contact</Link></li>
-                    <li><Link href="/About">About</Link></li>
                 </ul>
             </div>
         </div>

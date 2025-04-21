@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from "react";
 import styles from "@/styles/gallery.module.css";
-import HeaderComponent from "@/components/Header";
-import Navbar from "@/components/Navbar";
-import FooterComponent from "@/components/Footer";
 import GallerySlideshow from "@/components/slideshow";
 import { images as localImages } from "@/components/MiniGallery";
 import "@/styles/global.css";
