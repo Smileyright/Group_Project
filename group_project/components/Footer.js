@@ -18,7 +18,7 @@ const FooterComponent = () => {
                 <ul>
                     <h3>Art Gallery</h3>
                     <p><Link href="/">Home</Link></p>
-                    <p><Link href="/Artists">Artists</Link></p>
+                    <p><Link href="/Artists/vangogh">Artists</Link></p>
                     <p><Link href="/Gallery">Gallery</Link></p>
                     <p><Link href="/Contact">Contact</Link></p>
                 </ul>

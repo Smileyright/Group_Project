@@ -54,7 +54,7 @@ export default function HomePage() {
         <h2>Start Exploring</h2>
         <div className={styles.ctaButtons}>
           <Link href="/Gallery" className={styles.ctaButton}>Browse Gallery</Link>
-          <Link href="/Artists" className={styles.ctaButton}>Meet the Artists</Link>
+          <Link href="/Artists/vangogh" className={styles.ctaButton}>Meet the Artists</Link>
         </div>
       </div>
     </div>
