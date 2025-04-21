@@ -1,7 +1,4 @@
 import React from "react";
-import FooterComponent from "@/components/Footer";
-import HeaderComponent from "@/components/Header";
-import Navbar from "@/components/Navbar";
 import styles from "@/styles/about.module.css";
 
 
