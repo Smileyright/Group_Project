@@ -9,9 +9,6 @@ import MiniGallery from "@/components/MiniGallery";
 export default function HomePage() {
   return (
     <div>
-      <HeaderComponent />
-      <Navbar />
-
       <div className={styles.heroSection}>
         <h1 className={styles.heroTitle}>Discover Iconic Artists & Masterpieces</h1>
         <p className={styles.heroSubtitle}>Step into a curated world of timeless art and creativity</p>
@@ -60,8 +57,6 @@ export default function HomePage() {
           <Link href="/Artists" className={styles.ctaButton}>Meet the Artists</Link>
         </div>
       </div>
-
-      <FooterComponent />
     </div>
   );
 }

@@ -1,7 +1,4 @@
 import React, { useState } from "react";
-import FooterComponent from "@/components/Footer";
-import HeaderComponent from "@/components/Header";
-import Navbar from "@/components/Navbar";
 import styles from "@/styles/contact.module.css";
 import '/styles/global.css';
 
@@ -39,8 +36,6 @@ function ContactPage() {
 
   return (
     <div>
-      <HeaderComponent />
-      <Navbar />
       <div className={styles.contContainer}>
         <div className={styles.contHead}>
           <h4>Artist Gallery</h4>
@@ -140,8 +135,6 @@ function ContactPage() {
           )}
         </div>
       </div>
-
-      <FooterComponent />
     </div>
   );
 }

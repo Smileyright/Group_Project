@@ -9,12 +9,9 @@ function AboutPage() {
     return (
         <div className={styles.container}>
             <div className={styles.content}>
-            <HeaderComponent />
-            <Navbar />
             <h1>This is the about page</h1>
             </div>
             <div className={styles.footer}>
-            <FooterComponent />
             </div>
         </div>
     )

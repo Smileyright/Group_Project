@@ -37,9 +37,6 @@ function GalleryPage() {
 
   return (
     <div>
-      <HeaderComponent />
-      <Navbar />
-
       <div className={styles.galleryHeader}>
         <h1>Artist Gallery</h1>
         <p>Click on image for expansion</p>
@@ -115,8 +112,6 @@ function GalleryPage() {
           </div>
         </div>
       )}
-
-      <FooterComponent />
     </div>
   );
 }

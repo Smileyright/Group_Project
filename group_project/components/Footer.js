@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '@/styles/footer.module.css';
 import Link from "next/link";
-import { FaFacebook, FaTwitter, FaPinterest, FaInstagram, FaTiktok } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaPinterest, FaInstagram, FaTiktok } from "react-icons/fa";
 
 const FooterComponent = () => {
     return (
