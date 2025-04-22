@@ -61,14 +61,12 @@ function ContactPage() {
               loading="lazy"
             />
           </div>
-          
+
         </div>
 
         <div className={styles.contBody2}>
-          <h2>Gallery Suggestions</h2>
-          <p>We are always looking for ways to improve our gallery. If you have any suggestions or feedback, please let us know!</p>
-
-          {/* Lazy load the form with Suspense */}
+        
+          {/* Lazy load the form component */}G
           <Suspense fallback={<div>Loading contact form...</div>}>
             <ContactForm
               formData={formData}
