@@ -60,7 +60,7 @@ function GalleryPage() {
     <div>
       <div className={styles.galleryHeader}>
         <h1>Artist Gallery</h1>
-        <p>Click on image for expansion</p>
+        <p>Click on an image for expansion</p>
       </div>
 
       <GallerySlideshow images={localImages} />
