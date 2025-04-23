@@ -18,6 +18,10 @@ export const images = [
   { src: "/images/art13.jpg", alt: "Art 13" },
   { src: "/images/art14.jpg", alt: "Art 14" },
   { src: "/images/art15.jpg", alt: "Art 15" },
+  { src: "/images/art16.jpg", alt: "Art 16" },
+  { src: "/images/art17.jpg", alt: "Art 17" },
+  { src: "/images/art18.jpg", alt: "Art 18" },
+  { src: "/images/art19.jpg", alt: "Art 19" },
 ];
 
 export default function MiniGallery() {
@@ -26,22 +30,21 @@ export default function MiniGallery() {
       <h2>Mini Gallery</h2>
       <div className={styles.miniGalleryGrid}>
         {images.map((img, index) => {
+          // 19 images
           const dynamicClass =
-            index % 7 === 0
-              ? styles.large
-              : index % 4 === 0
-              ? styles.tall
-              : "";
+            index === 0 || index === 10 ? styles.large : 
+            index % 4 === 0 ? styles.tall :           
+            "";                                       
 
           return (
             <div key={index} className={`${styles.imageWrapper} ${dynamicClass}`}>
               <Image
                 src={img.src}
                 alt={img.alt}
-                width={800}
-                height={600}
+                fill
                 className={styles.galleryImage}
                 loading="lazy"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
           );
