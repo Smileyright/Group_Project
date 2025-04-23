@@ -66,7 +66,7 @@ function ContactPage() {
 
         <div className={styles.contBody2}>
         
-          {/* Lazy load the form component */}G
+          {/* Lazy load the form component */}
           <Suspense fallback={<div>Loading contact form...</div>}>
             <ContactForm
               formData={formData}

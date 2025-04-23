@@ -38,7 +38,7 @@ export default function ArtistPage() {
   };
 
   useEffect(() => {
-    // Reset likes when switching artists
+    // Reset 
     if (artist) {
       setLikes(artist.likes);
       setLiked(artist.liked);
@@ -75,7 +75,6 @@ export default function ArtistPage() {
           ))}
         </ul>
 
-        {/* 👇 NEXT ARTIST BUTTON */}
         <div className={styles.nextArtist}>
           <Link href={`/Artists/${nextArtistKey}`}>
             <button className={styles.nextButton}>

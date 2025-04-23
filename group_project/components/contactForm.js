@@ -1,6 +1,6 @@
-// components/ContactForm.js
 import React, { useState } from "react";
 import styles from "@/styles/contact.module.css";
+import StarRating from "@/components/rating";
 
 function ContactForm() {
   const [formData, setFormData] = useState({
@@ -8,7 +8,8 @@ function ContactForm() {
     lastName: "",
     email: "",
     phone: "",
-    suggestion: ""
+    suggestion: "",
+    rating: 0
   });
 
   const [submitted, setSubmitted] = useState(false);
@@ -21,6 +22,13 @@ function ContactForm() {
     }));
   };
 
+  const handleRating = (value) => {
+    setFormData((prevData) => ({
+      ...prevData,
+      rating: value
+    }));
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
@@ -30,7 +38,8 @@ function ContactForm() {
       lastName: "",
       email: "",
       phone: "",
-      suggestion: ""
+      suggestion: "",
+      rating: 0
     });
   };
 
@@ -102,6 +111,11 @@ function ContactForm() {
             required
             rows={5}
           />
+        </div>
+
+        <div className={styles.formGroup}>
+          <label htmlFor="rating">Rate Your Experience:</label>
+          <StarRating rating={formData.rating} onRate={handleRating} />
         </div>
 
         <button type="submit" className={styles.submitButton}>

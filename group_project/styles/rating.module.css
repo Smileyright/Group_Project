@@ -1,0 +1,23 @@
+.starRating {
+    font-size: 4rem;
+    margin: 0.5rem 0 1rem;
+    text-align: center;
+  }
+  
+  .filledStar {
+    color: #3dc8ff;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .emptyStar {
+    color: #ccc;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .filledStar:hover,
+  .emptyStar:hover {
+    transform: scale(1.2);
+  }
+  

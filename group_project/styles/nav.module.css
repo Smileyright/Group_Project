@@ -42,7 +42,7 @@
         .navcontainer {
           padding: 10px 0px;
           position: relative;
-          flex-direction: column; /* Stack logo and nav vertically */
+          flex-direction: column;
           align-items: center;
         }
       
@@ -59,7 +59,7 @@
           margin: 10px 0;
           display: block;
           text-align: center;
-          width: 100%; /* makes each link fill the line evenly */
+          width: 100%; 
         }
       
         .navcontainer li {
