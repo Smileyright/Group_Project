@@ -7,11 +7,21 @@ const FooterComponent = () => {
     return (
         <div className={styles.container}>
             <div className={styles.icons}>
-                <a href="#"><FaFacebook className={styles.icon} /></a>
-                <a href="#"><FaTwitter className={styles.icon} /></a>
-                <a href="#"><FaPinterest className={styles.icon} /></a>
-                <a href="#"><FaInstagram className={styles.icon} /></a>
-                <a href="#"><FaTiktok className={styles.icon} /></a>
+                <a href="https://www.facebook.com/artistsnetwork" target="_blank" rel="noopener noreferrer">
+                    <FaFacebook className={styles.icon} />
+                </a>
+                <a href="https://twitter.com/artsy" target="_blank" rel="noopener noreferrer">
+                    <FaTwitter className={styles.icon} />
+                </a>
+                <a href="https://www.pinterest.com/artistsnetwork/" target="_blank" rel="noopener noreferrer">
+                    <FaPinterest className={styles.icon} />
+                </a>
+                <a href="https://www.instagram.com/artsy/" target="_blank" rel="noopener noreferrer">
+                    <FaInstagram className={styles.icon} />
+                </a>
+                <a href="https://www.tiktok.com/@art" target="_blank" rel="noopener noreferrer">
+                    <FaTiktok className={styles.icon} />
+                </a>
             </div>
 
             <div className={styles.footnav}>
