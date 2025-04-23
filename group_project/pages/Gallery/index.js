@@ -7,6 +7,7 @@ import "@/styles/global.css";
 function GalleryPage() {
   const [artworks, setArtworks] = useState([]);
   const [selectedArt, setSelectedArt] = useState(null);
+  const [likedArtworks, setLikedArtworks] = useState({}); // State for liked 
 
   useEffect(() => {
     async function fetchArt() {
@@ -28,6 +29,29 @@ function GalleryPage() {
 
     fetchArt();
   }, []);
+
+  useEffect(() => {
+    // Load liked art
+    const savedLikes = JSON.parse(localStorage.getItem("likedArtworks")) || {};
+    setLikedArtworks(savedLikes);
+  }, []);
+
+  useEffect(() => {
+    
+    localStorage.setItem("likedArtworks", JSON.stringify(likedArtworks));
+  }, [likedArtworks]);
+
+  const toggleLike = (artworkId) => {
+    setLikedArtworks((prevLikes) => {
+      const newLikes = { ...prevLikes };
+      if (newLikes[artworkId]) {
+        delete newLikes[artworkId]; 
+      } else {
+        newLikes[artworkId] = true; // Add to liked
+      }
+      return newLikes;
+    });
+  };
 
   const leftColumn = artworks.filter((_, index) => index % 2 === 0);
   const rightColumn = artworks.filter((_, index) => index % 2 !== 0);
@@ -58,6 +82,12 @@ function GalleryPage() {
                   className={styles.cardImage}
                 />
                 <h2 className={styles.cardTitle}>{art.title}</h2>
+                <button
+                  onClick={() => toggleLike(art.objectID)}
+                  className={styles.likeButton}
+                >
+                  {likedArtworks[art.objectID] ? "❤️ Liked" : "🤍 Like"}
+                </button>
               </div>
             ))}
           </div>
@@ -77,13 +107,18 @@ function GalleryPage() {
                   className={styles.cardImage}
                 />
                 <h2 className={styles.cardTitle}>{art.title}</h2>
+                <button
+                  onClick={() => toggleLike(art.objectID)}
+                  className={styles.likeButton}
+                >
+                  {likedArtworks[art.objectID] ? "❤️ Liked" : "🤍 Like"}
+                </button>
               </div>
             ))}
           </div>
         </div>
       </div>
 
-     
       {selectedArt && (
         <div
           className={styles.modalOverlay}
@@ -97,7 +132,7 @@ function GalleryPage() {
               className={styles.closeButton}
               onClick={() => setSelectedArt(null)}
             >
-              ✕
+              
             </button>
             <img
               src={selectedArt.primaryImage}

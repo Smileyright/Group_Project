@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import styles from "@/styles/minigallery.module.css";
 
+
 export const images = [
   { src: "/images/art1.PNG", alt: "Art 1" },
   { src: "/images/art2.jpg", alt: "Art 2" },
@@ -21,7 +22,6 @@ export const images = [
   { src: "/images/art16.jpg", alt: "Art 16" },
   { src: "/images/art17.jpg", alt: "Art 17" },
   { src: "/images/art18.jpg", alt: "Art 18" },
-  { src: "/images/art19.jpg", alt: "Art 19" },
 ];
 
 export default function MiniGallery() {

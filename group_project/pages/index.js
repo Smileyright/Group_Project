@@ -1,9 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import styles from "../styles/main.module.css";
-import HeaderComponent from "@/components/Header";
-import Navbar from "@/components/Navbar";
-import FooterComponent from "@/components/Footer";
 import MiniGallery from "@/components/MiniGallery";
 
 export default function HomePage() {
