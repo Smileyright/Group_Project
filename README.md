@@ -14,3 +14,8 @@
 - Contact page with suggestion, feedback and rating feature that submits and saves to console.
 
 -- DEMO --
+![alt text](group_project/public/images/demo1.JPG)
+![alt text](group_project/public/images/demo2.JPG)
+![alt text](group_project/public/images/demo3.JPG)
+![alt text](group_project/public/images/demo4.JPG)
+![alt text](group_project/public/images/demo5.JPG)
