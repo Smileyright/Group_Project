@@ -22,3 +22,6 @@
 
 Zoomed in feature.
 ![alt text](group_project/public/images/demo6.JPG)
+
+-- FOLDER STRUCTURE --
+![alt text](image.png)
