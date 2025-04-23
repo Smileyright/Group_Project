@@ -52,11 +52,10 @@
   }
 
   
-  
   @media (max-width: 768px) {
     .miniGalleryGrid {
       grid-template-columns: 1fr;
-      grid-auto-rows: auto;
+      grid-auto-rows: minmax(300px, auto);
     }
   
     .large,
