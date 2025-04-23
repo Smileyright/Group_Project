@@ -67,7 +67,7 @@ function GalleryPage() {
 
       <div className={styles.Headsec}>
 
-        <h2> Discover and explore high reselution paintings in the palm of your hand.</h2>
+        <h2> Discover and explore high resolution paintings in the palm of your hand.</h2>
       </div>
 
       <div className={styles.galleryContainer}>
@@ -79,12 +79,12 @@ function GalleryPage() {
                 className={`${styles.card} ${
                   i % 2 === 0 ? styles.tallCard : styles.shortCard
                 }`}
-                onClick={() => setSelectedArt(art)}
               >
                 <img
                   src={art.primaryImageSmall}
                   alt={art.title}
                   className={styles.cardImage}
+                  onClick={() => setSelectedArt(art)}
                 />
                 <h2 className={styles.cardTitle}>{art.title}</h2>
                 <button
@@ -104,12 +104,12 @@ function GalleryPage() {
                 className={`${styles.card} ${
                   i % 2 === 0 ? styles.shortCard : styles.tallCard
                 }`}
-                onClick={() => setSelectedArt(art)}
               >
                 <img
                   src={art.primaryImageSmall}
                   alt={art.title}
                   className={styles.cardImage}
+                  onClick={() => setSelectedArt(art)}
                 />
                 <h2 className={styles.cardTitle}>{art.title}</h2>
                 <button
