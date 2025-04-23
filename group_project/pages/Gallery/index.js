@@ -65,6 +65,11 @@ function GalleryPage() {
 
       <GallerySlideshow images={localImages} />
 
+      <div className={styles.Headsec}>
+
+        <h2> Discover and explore high reselution paintings in the palm of your hand.</h2>
+      </div>
+
       <div className={styles.galleryContainer}>
         <div className={styles.columns}>
           <div className={styles.column}>
